@@ -55,4 +55,31 @@ public class Exercise_Exception {
 			
 		}
 	}
+	public void exercise3() {
+		// 범위를 벗어난 배열의 접근
+		int [] intArrs = new int[5];
+		try {
+			System.out.println(intArrs[5]);
+		} catch (ArrayIndexOutOfBoundsException e) {
+			// TODO: handle exception
+			System.out.println("배열의 인덱스가 범위를 벗어났습니다.");
+		}
+	}
+	public void exercise4() {
+		// 정수가 아닌 문자열을 정수로 변환할 때 예외 발생
+		// (NumberFormatException)
+		String [] str = new String[2];
+		str[0] = "1026";
+		str[1] = "5.15";
+		// String -> int
+		try {
+			int result = Integer.parseInt(str[0]);
+			System.out.printf("숫자로 변환된 값은 %d\n", result);
+			int check = Integer.parseInt(str[1]);
+			System.out.printf("숫자로 변환된 값은 %d\n", check);
+		} catch (NumberFormatException e) {
+			// TODO: handle exception
+			System.out.println("해당 문자열은 정수로 변환할 수 없습니다.");
+		}
+	}
 }
