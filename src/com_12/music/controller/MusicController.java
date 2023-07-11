@@ -89,4 +89,93 @@ public class MusicController {
 		}
 		return -1;
 	}
+	
+	public void inserionSortByTitleASC() {
+		// 삽입정렬 연습
+	}
+	
+	
+	public void bubbleSortByTitleASC() {
+//		int [] nums; -> mList로 변경 필요
+		for(int i = 0; i < mList.size()-1; i++) {
+			for(int j = 0; j < (mList.size()-1)-i; j++) {
+				Music mOne = mList.get(j);
+				Music mTwo = mList.get(j+1);
+				// The operator > is undefined for the argument type(s)
+				// java.lang.String, java.lang.String
+				// 결과값이 
+				// 0이면 동일함
+				// 양수값이면 왼쪽이 순서가 더 큼
+				// 음수값이면 왼쪽이 순서가 작음
+				if(mOne.getTitle().compareTo(mTwo.getTitle()) < 0) {
+					Music temp = mOne;
+					mList.set(j,  mTwo);
+					mList.set(j+1, temp);
+				}
+			}
+		}
+	}
+	
+	public void bubbleSortByTitleDESC() {
+//		int [] nums; -> mList로 변경 필요
+		for(int i = 0; i < mList.size()-1; i++) {
+			for(int j = 0; j < (mList.size()-1)-i; j++) {
+				Music mOne = mList.get(j);
+				Music mTwo = mList.get(j+1);
+				// The operator > is undefined for the argument type(s)
+				// java.lang.String, java.lang.String
+				// 결과값이 
+				// 0이면 동일함
+				// 양수값이면 왼쪽이 순서가 더 큼
+				// 음수값이면 왼쪽이 순서가 작음
+				if(mOne.getTitle().compareTo(mTwo.getTitle()) > 0) {
+					Music temp = mOne;
+					mList.set(j,  mTwo);
+					mList.set(j+1, temp);
+				}
+			}
+		}
+	}
+	
+	public void bubbleSortBySingerASC() {
+//		int [] nums; -> mList로 변경 필요
+		for(int i = 0; i < mList.size()-1; i++) {
+			for(int j = 0; j < (mList.size()-1)-i; j++) {
+				Music mOne = mList.get(j);
+				Music mTwo = mList.get(j+1);
+				// The operator > is undefined for the argument type(s)
+				// java.lang.String, java.lang.String
+				// 결과값이 
+				// 0이면 동일함
+				// 양수값이면 왼쪽이 순서가 더 큼
+				// 음수값이면 왼쪽이 순서가 작음
+				if(mOne.getSinger().compareTo(mTwo.getSinger()) < 0) {
+					Music temp = mOne;
+					mList.set(j,  mTwo);
+					mList.set(j+1, temp);
+				}
+			}
+		}
+	}
+	
+	public void bubbleSortBySingerDESC() {
+//		int [] nums; -> mList로 변경 필요
+		for(int i = 0; i < mList.size()-1; i++) {
+			for(int j = 0; j < (mList.size()-1)-i; j++) {
+				Music mOne = mList.get(j);
+				Music mTwo = mList.get(j+1);
+				// The operator > is undefined for the argument type(s)
+				// java.lang.String, java.lang.String
+				// 결과값이 
+				// 0이면 동일함
+				// 양수값이면 왼쪽이 순서가 더 큼
+				// 음수값이면 왼쪽이 순서가 작음
+				if(mOne.getSinger().compareTo(mTwo.getSinger()) > 0) {
+					Music temp = mOne;
+					mList.set(j,  mTwo);
+					mList.set(j+1, temp);
+				}
+			}
+		}
+	}
 }

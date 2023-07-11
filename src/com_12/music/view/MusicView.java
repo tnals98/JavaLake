@@ -68,7 +68,7 @@ public class MusicView {
 		System.out.println("====== 전체 곡 목록 출력 ======");
 		int count = 1;
 		for (Music music : allList) {
-			System.out.printf("%d번쩨 노래 -> 곡명 : %s, 가수명 : %s\n", count++, music.getTitle(), music.getSinger());
+			System.out.printf("%d번째 노래 -> 곡명 : %s, 가수명 : %s\n", count++, music.getTitle(), music.getSinger());
 		}
 	}
 }
