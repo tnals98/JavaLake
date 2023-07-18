@@ -7,7 +7,7 @@ import java.net.Socket;
 import java.net.UnknownHostException;
 import java.util.Scanner;
 
-public class ClientServer {
+public class ChattingClient {
 	public static void main(String[] args) {
 		String address = "127.0.0.1";
 		int port = 7777;
@@ -20,10 +20,10 @@ public class ClientServer {
 			Socket socket = new Socket(address, port);
 			// 연결 된 후에는 소켓 객체 생성
 			System.out.println("연결 성공!");
-			// 프로그램 기준 나가니까 OutputStream
-			os = socket.getOutputStream();
 			// 프로그램 기준 들어오니까 InputStream
 			is = socket.getInputStream();
+			// 프로그램 기준 나가니까 OutputStream
+			os = socket.getOutputStream();
 
 			while (true) {
 				// 1. 데이터 보내기
