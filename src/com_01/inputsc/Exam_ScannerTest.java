@@ -1,5 +1,5 @@
 package com_01.inputsc;
-import java.io.IOException;
+
 import java.util.Scanner;
 
 public class Exam_ScannerTest {
